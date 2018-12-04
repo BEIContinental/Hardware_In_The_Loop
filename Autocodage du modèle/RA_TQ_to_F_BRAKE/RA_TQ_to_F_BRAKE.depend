@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1516926230 source:c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\ra_tq_to_f_brake.cpp
+	"RA_TQ_to_F_BRAKE.h"
+	"RA_TQ_to_F_BRAKE_private.h"
+
+1516926230 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\ra_tq_to_f_brake.h
+	<stddef.h>
+	"rtwtypes.h"
+	"RA_TQ_to_F_BRAKE_types.h"
+
+1516926230 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\rtwtypes.h
+
+1516926230 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\ra_tq_to_f_brake_types.h
+	"rtwtypes.h"
+
+1516926230 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\ra_tq_to_f_brake_private.h
+	"rtwtypes.h"
+
+1516727836 source:c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\readdata.cpp
+	"readData.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdlib.h>
+
+1516727842 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\readdata.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+
+1516727846 source:c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\savedata.cpp
+	"saveData.h"
+	<iostream>
+	<fstream>
+
+1516727850 c:\users\thierry\desktop\3a\bei\2017-2018\autocodage\hev_model\ra_tq_to_f_brake\savedata.h
+	<iostream>
+	<fstream>
+

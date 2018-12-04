@@ -1,0 +1,44 @@
+% - - - - - TEST AUTOCODAGE Power_Efficiency - - - - - %
+% - - - - - IL FAUT AVOIR CREE LES FICHIERS OUTPUTS_code - - - - - %
+% - - - - - Ici on est en 200s de simu avec un pas de 0.01 - - - - - %
+
+close all
+clear all
+
+tfin = 200;
+pas = 0.01;
+
+t = 0:pas:tfin;
+
+% Sortie de base %
+% On cree une structure dans laquelle on charge les fichiers de sortie de
+% la simulation 
+
+
+RA_EM_CURRENT = load('OUTPUTS_SIMULINK\RA_EM_CURRENT.txt');
+
+% Sortie codee %
+% On cree une structure dans laquelle on charge les fichiers de sortie
+% issus de l'autocodage
+
+RA_EM_CURRENT_code = load('OUTPUTS_SIMULINK\RA_EM_CURRENT_code.txt');
+
+% Affichage - Comparaison %
+
+figure
+plot(t,RA_EM_CURRENT)
+hold on
+plot(t,RA_EM_CURRENT_code)
+legend('simulation','autocodage')
+
+
+figure
+subplot(1,3,1)
+plot(t,abs(OB_ER.RA_TQ_ME - OB_ER_code.RA_TQ_ME_code)*100/max(abs(OB_ER.RA_TQ_ME)))
+title('Erreur RA\_TQ\_ME')
+subplot(1,3,2)
+plot(t,abs(OB_ER.RA_TQ_MIN_ME - OB_ER_code.RA_TQ_MIN_ME_code)*100/max(abs(OB_ER.RA_TQ_MIN_ME)))
+title('Erreur RA\_TQ\_MIN\_ME')
+subplot(1,3,3)
+plot(t,abs(OB_ER.RA_TQ_MAX_ME - OB_ER_code.RA_TQ_MAX_ME_code)/max(abs(OB_ER.RA_TQ_MAX_ME)))
+title('Erreur RA\_TQ\_MAX\_ME')

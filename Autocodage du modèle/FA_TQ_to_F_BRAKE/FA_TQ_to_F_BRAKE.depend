@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1516944679 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\fa_tq_to_f_brake.cpp
+	"FA_TQ_to_F_BRAKE.h"
+	"FA_TQ_to_F_BRAKE_private.h"
+
+1516944679 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\fa_tq_to_f_brake.h
+	<stddef.h>
+	"rtwtypes.h"
+	"FA_TQ_to_F_BRAKE_types.h"
+
+1516944679 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\rtwtypes.h
+
+1516944679 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\fa_tq_to_f_brake_types.h
+
+1516944679 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\fa_tq_to_f_brake_private.h
+	"rtwtypes.h"
+
+1516941454 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\readdata.cpp
+	"readData.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdlib.h>
+
+1516941420 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\readdata.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1516938741 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\savedata.cpp
+	"saveData.h"
+	<iostream>
+	<fstream>
+
+1516938739 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\fa_tq_to_f_brake\savedata.h
+	<iostream>
+	<fstream>
+	<vector>
+

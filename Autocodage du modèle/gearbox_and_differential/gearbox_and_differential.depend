@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1516931812 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\gearbox_and_differential.cpp
+	"gearbox_and_differential.h"
+	"gearbox_and_differential_private.h"
+
+1516931812 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\gearbox_and_differential.h
+	<stddef.h>
+	<string.h>
+	"rtwtypes.h"
+	"gearbox_and_differential_types.h"
+
+1516931812 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\rtwtypes.h
+
+1516931812 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\gearbox_and_differential_types.h
+
+1516931812 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\gearbox_and_differential_private.h
+	"rtwtypes.h"
+
+1516931812 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\gearbox_and_differential_data.cpp
+	"gearbox_and_differential.h"
+	"gearbox_and_differential_private.h"
+
+1516941454 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\readdata.cpp
+	"readData.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdlib.h>
+
+1516941420 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\readdata.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1516938741 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\savedata.cpp
+	"saveData.h"
+	<iostream>
+	<fstream>
+
+1516938739 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\gearbox_and_differential\savedata.h
+	<iostream>
+	<fstream>
+	<vector>
+

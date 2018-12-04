@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1516754047 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\clutch.cpp
+	"Clutch.h"
+	"Clutch_private.h"
+
+1516754047 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\clutch.h
+	<math.h>
+	<stddef.h>
+	<string.h>
+	"rtwtypes.h"
+	"Clutch_types.h"
+
+1516754047 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\rtwtypes.h
+
+1516754047 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\clutch_types.h
+
+1516754047 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\clutch_private.h
+	"rtwtypes.h"
+
+1516754047 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\clutch_data.cpp
+	"Clutch.h"
+	"Clutch_private.h"
+
+1516727835 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\readdata.cpp
+	"readData.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdlib.h>
+
+1516727840 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\readdata.h
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+
+1516727845 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\savedata.cpp
+	"saveData.h"
+	<iostream>
+	<fstream>
+
+1516727849 c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\savedata.h
+	<iostream>
+	<fstream>
+
+1516754625 source:c:\users\florent\desktop\enseeiht\3a\semestre 1\ue negc5 - projet chaire cesec\be industriel\matlab bei\axelsplithev_v6\autocodage general\clutch\ert_main.cpp
+	<stddef.h>
+	<stdio.h>
+	"Clutch.h"
+	"rtwtypes.h"
+	"saveData.h"
+	"readData.h"
+
