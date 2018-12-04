@@ -1,0 +1,19 @@
+﻿La génération a démarré 22/01/2016 10:56:06.
+     1>Projet "C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Atomic_PI\Atomic_PI.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Atomic_P_I_ert_rtw\Atomic_P_I.cpp ..\..\Atomic_P_I_ert_rtw\ert_main.cpp ..\..\Atomic_P_I_ert_rtw\saveData.cpp
+         saveData.cpp
+         ert_main.cpp
+     1>c:\users\gemsdev\desktop\bei test ccode\séance5\atomic_p_i_ert_rtw\ert_main.cpp(90): warning C4101: 'out_tab2' : variable locale non référencée
+         Atomic_P_I.cpp
+         Génération de code en cours...
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Debug\Atomic_PI.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Debug\Atomic_PI.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Debug\Atomic_PI.lib" /MACHINE:X86 Debug\Atomic_P_I.obj
+         Debug\ert_main.obj
+         Debug\saveData.obj
+         Atomic_PI.vcxproj -> C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Debug\Atomic_PI.exe
+     1>Génération du projet "C:\Users\gemsdev\Desktop\BEI Test Ccode\Séance5\Atomic_PI\Atomic_PI\Atomic_PI.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:04.78

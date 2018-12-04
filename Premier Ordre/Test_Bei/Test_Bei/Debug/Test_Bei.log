@@ -1,0 +1,16 @@
+﻿La génération a démarré 06/01/2016 10:05:37.
+     1>Projet "C:\Users\gemsdev\Desktop\BEI Test Ccode\Test_Bei\Test_Bei\Test_Bei.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\testcode_ert_rtw\ert_main.c ..\..\testcode_ert_rtw\saveData.c ..\..\testcode_ert_rtw\testcode.c
+         testcode.c
+     1>c1 : fatal error C1083: Impossible d'ouvrir le fichier source : '..\..\testcode_ert_rtw\testcode.c' : No such file or directory
+         saveData.c
+     1>c1 : fatal error C1083: Impossible d'ouvrir le fichier source : '..\..\testcode_ert_rtw\saveData.c' : No such file or directory
+         ert_main.c
+     1>c1 : fatal error C1083: Impossible d'ouvrir le fichier source : '..\..\testcode_ert_rtw\ert_main.c' : No such file or directory
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\gemsdev\Desktop\BEI Test Ccode\Test_Bei\Test_Bei\Test_Bei.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:00.25

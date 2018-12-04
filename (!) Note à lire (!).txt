@@ -1,0 +1,27 @@
+Chaque dossier contient (au minimum) :
+ - Un script (généralement pour ajouter les variables au workspace afin de compiler)
+ - Un simulink avec des inputs et outputs pour créer le code C++
+ - Un simulink avec des from workspace et to worspace pour vérifier avec les fichier texte
+
+ - Un dossier avec les fichiers .cpp et .h qui est utilisé par visual C++ (c'est là qu'on récupère le code)
+
+NOTE SUR LES BLOCS ATOMIQUES :
+Nous n'avons pas eut le temps de tout découvrir sur ce que cela apportait mais nous avons fait une découverte tardive.
+
+Imposer un bloc en tant qu'atomic block permet de forcer la génération de code de MATLAB à être plus lisible (sur le principe).
+Pour faire un bloc atomique :
+	Faire "create a subsystem"
+	Une fois que le subsytem est créé faire clic droit dessus et choisir "block parameters"
+	Dans l'onglet main choisir "treat as atomic unit"
+	Faire appliquer
+
+Voilà ce que nous avions fait. Mais cela n'a pas beaucoup changé le code généré.
+Voici la découverte que vous pourrez tester :
+	En allant dans "block parameters" si le "treat as atomic unit" est coché
+	Aller jusqu'à l'onglet Code génération
+	Et là plusieurs options s'offrent à vous ...
+
+Je pense que nonreusable funtion crée une fonction et ne la réutilise pas si un bloc y ressemble vaguement (2 premier ordres par exemple)
+Alors que reusable fonction crée une fonction et si un bloc ressemble il la réutilise.
+Mais je pense que c'est avec ces deux paramètres qu'il faut jouer, à vous de tester.
+/!\ Ce que j'ai dit juste avant ne sont que des hypothèses c'est pour ça que ce n'est pas dans le tuto /!\
