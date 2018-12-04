@@ -1,0 +1,154 @@
+######################
+### Tests basiques ###
+######################
+
+##########
+### Je commence par tester un à un les deux bus CAN.
+### Pour information, les jumpers sont placés aux mêmes endroits sur les deux cartes Janus.
+
+CAN A :
+Câble   | Configuration                       | PC1 -> PC2    | PC2 -> PC1
+Petit   | Les jumpers sont correctement mis.  | OUI           | OUI
+
+### => Le bus CAN A fonctionne !!!
+
+CAN B :
+Câble   | Configuration                                                            | PC1 -> PC2 | PC2 -> PC1
+Gros    | Les switchs des quatre connecteurs sont sur ON.                          | NON        | NON
+Gros    | Seuls les switchs des deux connecteurs branchés aux PC sont sur ON.      | NON        | NON
+Gros    | Seuls les switchs des deux connecteurs extrêmes sont sur ON.             | NON        | NON
+
+### => Le bus CAN B ne fonctionne pas...
+
+### Je vais donc essayer de faire fonctionner le bus CAN B sans toucher à la configuration du bus CAN A.
+### Pour information, le bus CAN A est géré par le petit câble, et les jumpers de terminaison de ligne sont mis
+### sur les deux PC 1 et 2. Il est donc impossible de visualiser sur le CAN report un message du bus CAN A, sauf en
+### enlevant un des jumpers de terminaison de ligne sur l'un des deux PC bien évidemment.
+
+#####################
+### Tests avancés ###
+#####################
+
+### Dans les tests qui suivent, j'ai représenté de manière schématique la configuration matérielle, à savoir quels éléments
+### entre les PC et le CAN report sont branchés sur le bus, et à quel endroit du bus ils sont branchés. J'ai également informé
+### la position des interrupteurs oranges permettant l'activation de la résistance de terminaison de ligne.
+### Ainsi, \\\\\ signifie que rien n'est branché, PC2 OFF signifie que le PC 2 est branché, et que l'interrupteur est sur position OFF,
+### et CAN-R ON signifie que le CAN report est branché, et que l'interrupteur est sur la position ON.
+
+##########
+### Première série de tests : Mise en place de la configuration témoin.
+
+## Sous-test 1 : Envoi d'un message depuis le PC 2, placé au plus proche du CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+/////           /////           PC2 OFF         CAN-R ON
+=> On REÇOIT sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+/////           /////           PC2 ON          CAN-R ON
+=> On REÇOIT sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+/////           /////           PC2 OFF         CAN-R OFF
+=> On NE REÇOIT PAS sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+/////           /////           PC2 ON          CAN-R OFF
+=> On NE REÇOIT PAS sur le CAN report.
+
+### => Le gros câble fonctionne (au moins) d'une extrémité à la connexion directement adjacente.
+### => L'interrupteur côté CAN report semble devoir être sur ON pour pouvoir recevoir le message.
+
+## Sous-test 2 : Envoi d'un message depuis le PC 2, PC 2 et CAN report placés aux extrémités.
+|||||-----------|||||-----------|||||-----------|||||
+PC2 ON          /////           /////           CAN-R ON
+=> On REÇOIT sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+PC2 OFF         /////           /////           CAN-R ON
+=> On REÇOIT sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+PC2 OFF         /////           /////           CAN-R OFF
+=> On NE REÇOIT PAS sur le CAN report.
+
+### => Le gros câble fonctionne d'une extrémité à l'autre.
+### => L'interrupteur côté CAN report doit forcément être sur ON pour pouvoir recevoir le message.
+
+### CONCLUSIONS DE CETTE PREMIÈRE SÉRIE :
+### Le gros câble fonctionne intégralement.
+### L'interrupteur côté CAN report doit forcément être sur ON pour pouvoir recevoir le message.
+### Le PC 2 est apte à envoyer un message via le bus CAN B.
+
+##########
+### Seconde série de tests : Essai de l'envoi d'un message depuis le PC 1 avec la configuration témoin.
+
+## Sous-test 1 : Envoi d'un message depuis le PC 1, PC 1 et CAN report placés aux extrémités.
+|||||-----------|||||-----------|||||-----------|||||
+PC1 ON          /////           /////           CAN-R ON
+=> On NE REÇOIT PAS sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+PC1 OFF         /////           /////           CAN-R ON
+=> On NE REÇOIT PAS sur le CAN report.
+
+### CONCLUSION DE CETTE SECONDE SÉRIE :
+### Le PC 1 n'arrive pas à envoyer quoi que ce soit via le bus CAN B.
+
+##########
+### Troisième série de tests : Permutation des deux petits câbles permettant de lier le port CAN B de la carte Janus au gros câble.
+
+## Sous-test 1 : PC 2 et CAN report aux extrémités.
+|||||-----------|||||-----------|||||-----------|||||
+PC2 ON          /////           /////           CAN-R ON
+=> On REÇOIT sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+PC2 OFF         /////           /////           CAN-R ON
+=> On REÇOIT sur le CAN report.
+
+### => Le petit câble, initialement sur le PC 1, et dorénavant sur le PC 2, fonctionne.
+
+## Sous-test 2 : PC 1 et CAN report aux extrémités.
+|||||-----------|||||-----------|||||-----------|||||
+PC1 ON          /////           /////           CAN-R ON
+=> On NE REÇOIT PAS sur le CAN report.
+|||||-----------|||||-----------|||||-----------|||||
+PC1 OFF         /////           /////           CAN-R ON
+=> On NE REÇOIT PAS sur le CAN report.
+
+### => Malgré le changement, le PC 1 ne peut toujours pas envoyer un message via le bus CAN B.
+
+### CONCLUSION DE CETTE TROISIÈME SÉRIE :
+### Le problème ne vient pas des petits câbles, puisque l'un ou l'autre permet au PC 2 d'envoyer un message au CAN report.
+
+#####################
+CONCLUSION INTERMÉDIAIRE :
+Le problème ne vient ni du gros câble, ni des petits câbles.
+Le problème peut donc venir du hardware côté PC 1, au niveau de la carte Janus, étant donné que la partie software est une copie parfaite du PC 2.
+#####################
+
+##########
+### Quatrième série de tests : Changements hardware du PC 1
+
+## Sous-test 1 : Changement de l'adresse du bus CAN du PC 1
+### Je décide de passer de l'adresse 0xD7000 (et 0xD7200) à l'adresse 0xD0000 (et 0xD0200) sur le PC 1, en insérant correctement les jumpers sur la carte.
+### Je change également les valeurs du fichier install.sh du dossier Janus.
+
+### => Le bus CAN A fonctionne toujours aussi bien, tandis que le bus CAN B ne fonctionne toujours pas.
+
+## Sous-test 2 : Basculement sur l'ancienne adresse 0xD7000 (et 0xD7200) et changement de l'interruption du bus CAN B du PC 1
+### Je décide de passer de l'interruption 7 à l'interruption 6 pour le bus CAN B sur le PC 1, en insérant correctement les jumpers sur la carte.
+### Je change également les valeurs du fichier install.sh du dossier Janus.
+
+### => Le bus CAN A fonctionne toujours aussi bien, tandis que le bus CAN B ne fonctionne toujours pas.
+
+### CONCLUSION DE CETTE QUATRIÈME SÉRIE :
+### Sauf si les nouvelles adresse et interruption testées sont défectueuses, le problème ne vient pas de là.
+### Je remets donc l'interruption liée au bus CAN B sur 7.
+
+##########
+### Ultime test : Permutation des cartes Janus PC 1 et PC 2
+
+### => Cette fois, c'est bien le PC 2 qui n'arrive plus à envoyer de message au CAN report via le bus CAN B.
+### => Quant  à lui, le PC 1 arrive à envoyer un message au CAN report via le bus CAN B.
+### => La communication sur le bus CAN A fonctionne normalement.
+
+#####################
+CONCLUSION :
+LE PROBLÈME VIENT DE LA CARTE JANUS, ANCIENNEMENT SUR LE PC 1, ET DORÉNAVANT SUR LE PC 2.
+LE BUS CAN A DE CETTE CARTE FONCTIONNE CORRECTEMENT, TANDIS QUE LE BUS CAN B NE FONCTIONNE PAS.
+CETTE CONCLUSION EST À VÉRIFIÉE AVEC LA TROISIÈME CARTE JANUS DU PC 3 LORSQUE DISPONIBLE.
+#####################

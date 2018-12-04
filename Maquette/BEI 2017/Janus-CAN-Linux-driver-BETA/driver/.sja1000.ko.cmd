@@ -1,0 +1,1 @@
+cmd_/home/gems/Desktop/Janus-CAN-Linux-driver-BETA/driver/sja1000.ko := ld -r -m elf_i386 -T /usr/src/linux-source-2.6.32/scripts/module-common.lds --build-id -o /home/gems/Desktop/Janus-CAN-Linux-driver-BETA/driver/sja1000.ko /home/gems/Desktop/Janus-CAN-Linux-driver-BETA/driver/sja1000.o /home/gems/Desktop/Janus-CAN-Linux-driver-BETA/driver/sja1000.mod.o

@@ -1,0 +1,99 @@
+
+    Good afternoon. We apologize for the delay: we have an immediate development: I can now give a pre-release BETA version of the Janus-MM CAN driver for Linux OS.
+
+    These files will include a compilable Linux kernel module driver, and a script to install it, and three programs. Two programs will send / recieve, and the third will set the mode settings including the bit rates of the CAN ports.
+
+    The driver is a Linux kernel module that interfaces with the Janus board for CAN operations, and the applications provide interface (API) to that driver, and to the board in the case of the bit-rate setting program.
+
+Foremost, you should have the correct hardware and settings selected.
+
+For my setup, I use jumpers on:
+
+J4:
+IO/M
+CN00
+CN01
+CN05
+CN07
+
+(But different base address and interrupt settings are concievably usable with correct configuration of the driver.)
+
+J5:
+
+CAN A IRQ5
+CAN B IRQ7
+
+CAN A R
+CAN B R
+
+J6:
+
+COM A IRQ3
+COM B IRQ4
+
+COM A R
+COM B R
+
+IRQ 5 and IRQ 7 should be reserved in the BIOS or otherwise unused in the OS and hardware; or IRQ sharing must be implemented (not included with the driver).
+
+* * *
+
+In order to install the driver, first one needs to uncompress it.
+
+tar -jxvf janus_beta_1.2.tar.bz2
+
+Which creates directories:
+./application/
+./driver/
+
+Next, to compile and install the driver module one commands:
+
+cd driver
+uninstall.sh
+make
+install.sh
+
+Next, for the first time, once set the bit rates for each port:
+
+./bitrate -b 100000 canA
+./bitrate -b 100000 canB
+
+Double-check what was written:
+
+./bitrate
+
+Finally, one may run the test using two test shells / console-windows:
+
+Recieve must be started first; send must be started second.
+
+Window 2; commands for recieve:
+
+./canrecv canB 0 -o output.txt
+
+Window 1; command for send:
+./cansend canA -l 0x41 0x42 0x43 0x44 0x45 0x46 0x47 0x48
+
+After desired time has elapsed, in each window, quit using CONTROL-C. Quit 'canrecv' first, and then only quit 'cansend'.
+
+Check your results to make sure you have set correct settings and connected your loop-back cable correctly.
+
+vi 1output.txt
+
+* * *
+
+Added functionality can be explored if desired, but the commands given are recommended.
+
+./bitrate --help
+
+./cansend --help
+
+./cansend --help
+
+Additionally, a minimalistic instruction file will be included (DOC format).
+
+
+    Please do tell us how you are going with these software items and let us know any problems you encounter. We will be happy to help you.
+
+    Sincere Regards,
+
+    James Moore

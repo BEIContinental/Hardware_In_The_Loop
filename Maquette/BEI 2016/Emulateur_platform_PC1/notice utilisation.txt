@@ -1,0 +1,59 @@
+/***************************************************************************/
+Fonctionnement de la version 1A
+/***************************************************************************/
+
+fonctionnement avec envoie toute les 10 sec
+temps de tratiement sur le pc2 de 5 sec
+
+on obtient dans la console du pc1
+
+Debut du père
+Nous sommes dans le père (pid = 2154).
+Il envoie au fils : "3000".
+Début de lenvoie par le fils 1 (pid = 2155).
+Device Opened par sendFloat (/dev/canA)
+<0x001> [4] 33 30 30 30 
+Device Closed par sendFloat 
+Fin de lenvoie par le fils 1 (pid = 2155).
+
+5sec après (on attend la réception depuis le PC2)
+
+<0x001> [8] 30 2e 39 35 39 39 32 33 
+Device Closed par recvFloat
+la chaine vaut : 0.959923
+Ecriture dans le fichier texte terminée fils 2 (pid = 2156) .
+Device Opened (/dev/canA) par recvFloat
+<0x001> [7] 31 2e 32 33 33 38 31 
+Device Closed par recvFloat
+la chaine vaut : 1.23381
+Ecriture dans le fichier texte terminée fils 2 (pid = 2156) .
+Device Opened (/dev/canA) par recvFloat
+
+5sec après début du père
+
+/***************************************************************************/
+Fonctionnement de la version 1B
+/***************************************************************************/
+
+fonctionnement avec envoie toute les 10 millisec
+temps de tratiement sur le pc2 considérer négligeable (pas de sleep)
+
+on obtient dans la console du pc1
+
+Debut du père
+Nous sommes dans le père (pid = 2297).
+Il envoie au fils : "3000".
+Début de lenvoie par le fils 1 (pid = 2298).
+Device Opened par sendFloat (/dev/canA)
+<0x001> [4] 33 30 30 30 
+<0x001> [7] 35 32 2e 31 34 31 31 
+Device Closed par recvFloat
+la chaine vaut : 52.1411
+Ecriture dans le fichier texte terminée fils 2 (pid = 2299) .
+Device Opened (/dev/canA) par recvFloat
+Device Closed par sendFloat 
+Fin de lenvoie par le fils 1 (pid = 2298).
+
+la fermeture du can par sendFloat se fait à la fin
+tous les processus tournent en même temps et il n'y a pas de gestion de priorités
+

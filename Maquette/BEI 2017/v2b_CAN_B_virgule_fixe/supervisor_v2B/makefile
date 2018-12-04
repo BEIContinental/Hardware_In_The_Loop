@@ -1,0 +1,35 @@
+all : main.o recvFloat.o sendFloat.o saveData.o clearData.o pere.o fils1.o fils2.o fixedPoint.o
+	g++ main.o -o supervisor recvFloat.o sendFloat.o saveData.o clearData.o pere.o fils1.o fils2.o fixedPoint.o
+
+main.o : main.cpp
+	g++ -c main.cpp -o main.o
+
+recvFloat.o : recvFloat.cpp
+	g++ -c recvFloat.cpp -o recvFloat.o
+
+sendFloat.o : sendFloat.cpp
+	g++ -c sendFloat.cpp -o sendFloat.o
+
+saveData.o : saveData.cpp
+	g++ -c saveData.cpp -o saveData.o
+
+clearData.o : clearData.cpp
+	g++ -c clearData.cpp -o clearData.o
+
+pere.o : pere.cpp
+	g++ -c pere.cpp -o pere.o
+
+fils1.o : fils1.cpp
+	g++ -c fils1.cpp -o fils1.o
+
+fils2.o : fils2.cpp
+	g++ -c fils2.cpp -o fils2.o
+
+fixedPoint.o : fixedPoint.cpp
+	g++ -c fixedPoint.cpp -o fixedPoint.o
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf supervisor
